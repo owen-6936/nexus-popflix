@@ -1,0 +1,25 @@
+{
+  "name": "nexus-popflix-monorepo",
+  "version": "1.0.0",
+  "description": "Root package for the Nexus Popflix full-stack application.",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server",
+    "common"
+  ],
+  "scripts": {
+    "start:client": "npm run dev --workspace=client",
+    "start:server": "npm run dev --workspace=server",
+    "start:all": "npm run start:client & npm run start:server",
+    "install:all": "npm install",
+    "build:client": "npm run build --workspace=client",
+    "build:server": "npm run build --workspace=server",
+    "build:all": "npm run build:client && npm run build:server",
+    "lint": "npm run lint --workspaces",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
