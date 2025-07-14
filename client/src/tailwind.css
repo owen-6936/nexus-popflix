@@ -1,1 +1,31 @@
 @import "tailwindcss";
+
+/* Remove @apply usage from plain CSS file. Use Tailwind utility classes in your HTML instead. */
+/* Example: <div class="h-line border-b"></div> */
+body,
+html,
+#root {
+  @apply h-full w-full m-0;
+}
+
+/* Navbar start*/
+.h-line::after {
+  content: "";
+  @apply h-5 border w-1 border-gray-300;
+}
+
+.sidebar {
+  @apply top-0 bg-gray-900 text-gray-50 z-10 shadow max-h-[inherit];
+}
+
+#sidebar-list li {
+  @apply opacity-70 p-2 rounded cursor-pointer grid grid-cols-[10%_90%] gap-5;
+}
+#sidebar-list li:active,
+#sidebar-list li:hover {
+  @apply opacity-100 bg-gray-800 text-[16.2px];
+}
+
+#sidebar-list li:focus-visible {
+  @apply border-gray-300;
+}
