@@ -1,11 +1,15 @@
 import { Menu, Search, Bell, CircleUser } from "lucide-react";
 
-export default function Navbar() {
+export default function Navbar({ handleOpenSidebar }) {
   return (
     <nav className="navbar">
       <ul id="nav-list" className="navbar-list">
         <li className="nav-items flex items-center justify-center cursor-pointer md:hidden">
-          <Menu size={"1.5rem"} strokeWidth={"1.5px"} />
+          <Menu
+            size={"1.5rem"}
+            strokeWidth={"1.5px"}
+            onClick={handleOpenSidebar}
+          />
         </li>
         <li className="flex items-center justify-center md:hidden">
           <span className="h-line"></span>
