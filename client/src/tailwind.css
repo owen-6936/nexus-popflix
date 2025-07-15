@@ -1,25 +1,38 @@
 @import "tailwindcss";
 
-/* Remove @apply usage from plain CSS file. Use Tailwind utility classes in your HTML instead. */
-/* Example: <div class="h-line border-b"></div> */
+/* general styling starts here*/
 body,
 html,
 #root {
-  @apply h-full w-full m-0;
+  @apply h-full w-full m-0 box-border;
 }
+#root {
+  @apply md:grid md:grid-cols-[16rem_1fr] md:grid-rows-[auto_1fr];
+}
+main {
+  @apply w-full overflow-y-auto;
+}
+/* general styling ends here*/
 
-/* Navbar start*/
+/* Navbar and sidebar styling starts here*/
 .h-line::after {
   content: "";
   @apply h-5 border w-1 border-gray-300;
 }
-
+.navbar {
+  @apply h-15 shadow w-full items-center content-center;
+}
+.navbar-list {
+  @apply grid grid-rows-[auto] grid-cols-[5%_5%_70%_5%_5%] gap-2 place-content-center;
+  @apply md:grid-cols-[80%_10%_10%] md:flex-10/12;
+}
 .sidebar {
-  @apply top-0 bg-gray-900 text-gray-50 z-10 shadow max-h-[inherit];
+  @apply top-0 bg-gray-900 text-gray-50 z-10 max-h-[inherit] absolute h-full min-w-[320px] max-w-[60%] -left-[320px];
+  @apply md:row-span-2 md:static md:min-w-auto md:max-w-full;
 }
 
 #sidebar-list li {
-  @apply opacity-70 p-2 rounded cursor-pointer grid grid-cols-[10%_90%] gap-5;
+  @apply opacity-70 p-2 rounded cursor-pointer grid grid-cols-[10%_90%] gap-3;
 }
 #sidebar-list li:active,
 #sidebar-list li:hover {
