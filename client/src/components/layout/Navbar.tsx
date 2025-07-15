@@ -1,4 +1,5 @@
 import { Menu, Search, Bell, CircleUser } from "lucide-react";
+import myImage from "../../assets/images/profile-icon.jpg";
 
 export default function Navbar({ handleOpenSidebar }) {
   return (
@@ -29,8 +30,14 @@ export default function Navbar({ handleOpenSidebar }) {
         <li className="flex items-center justify-center cursor-pointer">
           <Bell stroke="gray" />
         </li>
-        <li className="flex items-center justify-center cursor-pointer">
-          <CircleUser stroke="gray" />
+        <li className="flex items-center justify-center cursor-pointer  w-8 h-8">
+          <img
+            id="profile-icon"
+            src={myImage}
+            alt="profile picture icon"
+            width={"64px"}
+            height={"64px"}
+          />
         </li>
       </ul>
     </nav>
