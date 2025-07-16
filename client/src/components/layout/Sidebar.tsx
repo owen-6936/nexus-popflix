@@ -1,4 +1,11 @@
-import { Clapperboard, Film, Flame, Home, ListVideo, X } from "lucide-react";
+import {
+  Clapperboard,
+  Film,
+  Flame,
+  Home,
+  ListVideo,
+  ChevronLeftCircle,
+} from "lucide-react";
 
 export default function Sidebar({
   AnimationToggleStyling,
@@ -9,9 +16,9 @@ export default function Sidebar({
       <div id="logo" className="text-2xl font-bold text-indigo-400 p-5">
         Popflix
       </div>
-      <X
+      <ChevronLeftCircle
         id="close-sidebar-btn"
-        className="absolute right-5 top-5 cursor-pointer backdrop-blur-3xl sm:hidden"
+        className="absolute right-5 top-5 cursor-pointer backdrop-blur-3xl"
         onClick={handleCloseSidebar}
       />
       <ul id="sidebar-list" className="p-5 pt-1 ">

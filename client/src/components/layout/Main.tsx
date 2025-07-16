@@ -1,3 +1,12 @@
+import CardRack from "../CardRack";
+
 export default function Main() {
-  return <main>Main Content Goes Here</main>;
+  return (
+    <main className="scrollbar-hide">
+      <CardRack />
+      <CardRack />
+      <CardRack />
+      <CardRack />
+    </main>
+  );
 }

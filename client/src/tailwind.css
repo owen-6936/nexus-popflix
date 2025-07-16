@@ -13,8 +13,17 @@ html,
   @apply md:grid md:grid-cols-[auto_1fr] md:grid-rows-[auto_1fr];
 }
 main {
-  @apply w-full h-[calc(100%-3.75rem)] overflow-y-auto flex justify-center items-center;
+  @apply w-full h-[calc(100%-3.75rem)] overflow-y-auto;
   @apply md:h-full;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  display: none !important;
 }
 /* general styling ends here*/
 
@@ -27,8 +36,9 @@ main {
   @apply h-[3.75rem] shadow w-full items-center content-center;
 }
 .navbar-list {
-  @apply grid grid-rows-[auto] grid-cols-[5%_5%_70%_5%_5%] gap-2 place-content-center;
-  @apply md:grid-cols-[80%_10%_10%] md:flex-10/12;
+  @apply grid grid-rows-[auto] grid-cols-[2rem_1rem_1fr_3rem_3rem] place-content-center gap-1;
+  @apply sm:grid-cols-[3rem_1rem_1fr_5rem_5rem];
+  @apply md:grid-cols-[80%_10%_10%] md:flex-10/12 md:gap-2;
 }
 #profile-icon {
   @apply aspect-square rounded-full;
@@ -57,4 +67,5 @@ main {
 
 .sidebar.hide {
   @apply translate-x-0 duration-500;
+  /* @apply md:-translate-x-[200px] duration-500; */
 }

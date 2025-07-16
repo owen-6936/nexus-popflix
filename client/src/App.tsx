@@ -1,7 +1,7 @@
 import Main from "./components/layout/Main";
 import Navbar from "./components/layout/Navbar";
 import Sidebar from "./components/layout/Sidebar";
-import { useState, useEffect, Dispatch, SetStateAction } from "react";
+import { useState } from "react";
 
 export default function App() {
   const [sidebarDisplayStyle, setSidebarDisplayStyle] = useState("hide");
