@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 0 0% 6%; /* Charcoal */
+    --foreground: 0 0% 100%; /* Pure white */
+
+    --card: 0 0% 10%; /* Dark gray card */
+    --card-foreground: 0 0% 100%;
+
+    --primary: 0 100% 45%; /* Netflix red */
+    --primary-foreground: 0 0% 100%;
+
+    --accent: 0 0% 20%; /* Dark accent */
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 60%;
+
+    --badge: 220 60% 40%; /* HSL: deep blue */
+    --badge-foreground: 220 80% 85%; /* icy blue text */
+
+    --milestone: 48 100% 50%; /* Gold for Popflix flair */
+    --milestone-foreground: 0 0% 100%;
+
+    --radius: 0.5rem;
+    --glass: rgba(255, 255, 255, 0.08); /* Soft white tint */
+    --glass-blur: 12px; /* Frosted blur radius */
+    --glass-border: rgba(255, 255, 255, 0.2); /* Optional border */
+  }
+}
+
+/* glass.css — Popflix Frosted Glass Utilities */
+
+.glass {
+  background-color: var(--glass);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+}
+
+.glass-sm {
+  background-color: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(6px);
+}
+
+.glass-dark {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}

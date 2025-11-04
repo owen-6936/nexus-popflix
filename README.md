@@ -1,69 +1,69 @@
-# React + TypeScript + Vite
+# 🎬 Popflix UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Popflix is a modular, milestone-driven streaming interface built with Next.js. It supports multitasking-aware playback, reviewer-centric tagging, and badge-worthy contributor experiences.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Framework**: Next.js (App Router, TypeScript)
+- **Styling**: Tailwind CSS + Radix UI
+- **State**: Zustand (lightweight and composable)
+- **Player**: Shaka Player (adaptive streaming)
+- **Auth**: NextAuth.js + JWT
+- **Animations**: Framer Motion
+- **CLI Companion**: Termplex integration (optional)
 
-## Expanding the ESLint configuration
+## 🧱 Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```bash
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+popflix-ui/
+├── app/                  # App Router pages
+│   ├── watch/[id]/       # Playback with milestone overlays
+│   ├── discover/         # Smart search and watchlists
+│   ├── badges/           # Contributor badge dashboard
+│   └── layout.tsx        # Shared layout and style tokens
+├── components/           # Reusable UI components
+├── lib/                  # API clients, auth, style logic
+├── public/               # Static assets
+├── styles/               # Tailwind config and globals
+├── tailwind.config.ts
+├── tsconfig.json
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🧠 Milestone Features
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- 🎥 **Custom Player** with badge overlays and heatmap timeline
+- 🧠 **MilestoneTagger** for scene annotations and contributor clarity
+- 🏷️ **Badge System** for binge streaks, genre mastery, and review quality
+- 🧩 **Modular Microservices** (coming soon) for media, auth, discovery, and analytics
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🛠 Setup
+
+```bash
+# Install dependencies
+pnpm install
+
+# Run development server
+pnpm dev
 ```
+
+## 📦 Scripts
+
+```bash
+pnpm dev       # Start dev server
+pnpm build     # Build for production
+pnpm lint      # Run ESLint
+pnpm format    # Format with Prettier
+```
+
+## 🧪 Coming Soon
+
+- CLI playback interface via Termplex
+- Contributor velocity dashboard
+- Anonymous mode with local-first data
+- Programmable watchlist builder
+
+---
+
+Built with clarity, speed, and contributor joy ✨

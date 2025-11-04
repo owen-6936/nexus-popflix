@@ -1,0 +1,88 @@
+/* text.css — Popflix Theme Text Utilities */
+
+/* Text Color Utilities */
+
+.text-foreground {
+  color: hsl(var(--foreground));
+}
+.text-card-foreground {
+  color: hsl(var(--card-foreground));
+}
+.text-popover-foreground {
+  color: hsl(var(--popover-foreground));
+}
+.text-primary-foreground {
+  color: hsl(var(--primary-foreground));
+}
+.text-secondary-foreground {
+  color: hsl(var(--secondary-foreground));
+}
+.text-muted-foreground {
+  color: hsl(var(--muted-foreground));
+}
+.text-accent-foreground {
+  color: hsl(var(--accent-foreground));
+}
+.text-destructive-foreground {
+  color: hsl(var(--destructive-foreground));
+}
+.text-badge-foreground {
+  color: hsl(var(--badge-foreground));
+}
+.text-milestone-foreground {
+  color: hsl(var(--milestone-foreground));
+}
+.text-heatmap-foreground {
+  color: hsl(var(--heatmap-foreground));
+}
+
+/* Optional Font Weight Variants */
+
+.font-bold {
+  font-weight: 700;
+}
+.font-semibold {
+  font-weight: 600;
+}
+.font-medium {
+  font-weight: 500;
+}
+.font-normal {
+  font-weight: 400;
+}
+.font-light {
+  font-weight: 300;
+}
+
+/* Optional Text Size Variants */
+
+.text-xs {
+  font-size: 0.75rem;
+}
+.text-sm {
+  font-size: 0.875rem;
+}
+.text-base {
+  font-size: 1rem;
+}
+.text-lg {
+  font-size: 1.125rem;
+}
+.text-xl {
+  font-size: 1.25rem;
+}
+.text-2xl {
+  font-size: 1.5rem;
+}
+.text-3xl {
+  font-size: 1.875rem;
+}
+.text-4xl {
+  font-size: 2.25rem;
+}
+.text-5xl {
+  font-size: 3rem;
+}
+.text-6xl {
+  font-size: 3.75rem;
+}
